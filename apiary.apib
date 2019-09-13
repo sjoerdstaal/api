@@ -544,7 +544,7 @@ We list all backwards-incompatible changes here. As described above, new additio
   - `quotations.info`
 
 - We simplified the `products.info` and `products.list` endpoints:
-  - `name` and `description` are no longer wrapped in a `translations` object.
+  - `name` and `description` are no longer wrapped in a `translations` object. 
   - `external_id` was renamed to `code`
   - `prices` are temporarily no longer returned, to avoid confusion, as they didn't take into account price lists
 
@@ -1588,6 +1588,7 @@ Get a list of deals.
             + phase_id: `1758e847-cc1f-04ce-bd17-5a852e8c01b4` (string, optional)
             + responsible_user_id: `98b2863e-7b01-4232-82f5-ede1f0b9db22` (string, optional)
             + updated_since: `2018-02-11T16:45:30+00:00` (string, optional)
+            + created_before: `2018-02-11T16:45:30+00:00` (string, optional)
         + page (Page, optional)
         + sort (array, optional)
             + (object)
@@ -2540,7 +2541,6 @@ Update an invoice.
                         + product_category_id: `e2314517-3cab-4aa9-8471-450e73449041` (string, optional)
         + invoice_date: `2016-02-04` (string, optional)
         + note: `Some comments about the invoice` (string, optional, nullable)
-        + expected_payment_method (ExpectedPaymentMethod, optional, nullable)
         + discounts (array, optional)
             (object)
                 + value: 10 (number, required)
